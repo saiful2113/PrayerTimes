@@ -1,5 +1,5 @@
 function prayerTimes(latitude, longitude){
-    fetch('http://api.aladhan.com/v1/calendar?latitude='+latitude+'&longitude='+longitude+'&method=2')
+    fetch('http://api.aladhan.com/v1/calendar?latitude='+latitude+'&longitude='+longitude+'&method=11')
     .then(response => response.json())
     .then(function(response){
         let date        = new Date();
@@ -18,7 +18,7 @@ function prayerTimes(latitude, longitude){
                 Times.innerHTML = data[i];
                 tableTbody.appendChild(row);
         }
-        
+
         table.appendChild(tableTbody);
         app.appendChild(table);
 
